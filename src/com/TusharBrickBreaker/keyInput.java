@@ -22,8 +22,8 @@ public class keyInput extends KeyAdapter {
             if(tempObject.getId() == ID.Player){
                 //if(key == KeyEvent.VK_W) tempObject.setY(tempObject.getY()-1);
                 //if(key == KeyEvent.VK_S) tempObject.setY(tempObject.getY()+1);
-                if(key == KeyEvent.VK_A) tempObject.setX(tempObject.getX()-5);
-                if(key == KeyEvent.VK_D) tempObject.setX(tempObject.getX()+5);
+                if(key == KeyEvent.VK_A) tempObject.setX(tempObject.getX()-10);
+                if(key == KeyEvent.VK_D) tempObject.setX(tempObject.getX()+10);
             }
         }
     }
