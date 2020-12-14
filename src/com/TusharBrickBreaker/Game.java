@@ -14,10 +14,12 @@ public class Game extends Canvas implements Runnable {
     public Game(){
 
         handler = new Handler();
-        //handler.addObject(new Player(400,320));
+        this.addKeyListener(new keyInput(handler));
+
         Random r = new Random();
         new Window(WIDTH, HEIGHT, "games!", this);
         handler.addObject(new Player(WIDTH/2 - 5,HEIGHT -100));
+        handler.addObject(new Projectile());
     }
 
     public static void main(String[] args) {
@@ -48,7 +50,7 @@ public class Game extends Canvas implements Runnable {
 
             if(System.currentTimeMillis() - timer > 1000){
                 timer += 1000;
-                System.out.println("FPS: " + frames);
+                //System.out.println("FPS: " + frames);
                 frames = 0;
             }
         }
