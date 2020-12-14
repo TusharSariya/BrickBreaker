@@ -12,14 +12,15 @@ public class Projectile extends GameObject{
     Projectile(){
         super(WIDTH/2,HEIGHT/2,ID.Projectile);
         Random r = new Random();
-        int temp = r.nextInt(180);
-        System.out.println(temp);
-        int xdir = (int) (cos(temp)*5);
-        int ydir = (int) (sin(temp)*5);
-        System.out.println(xdir);
-        System.out.println(ydir);
-        setVelX((int) (cos(temp)*5));
-        setVelY((int) (sin(temp)*5));
+        double angle = r.nextInt(90)+225;
+        angle = toRadians(angle);
+        System.out.println("angle:"+angle);
+        System.out.println("xdir:"+cos(angle));
+        System.out.println("ydir:"+sin(angle));
+        int xdir = (int) (cos(angle)*5);
+        int ydir = (int) (sin(angle)*5);
+        setVelX(xdir);
+        setVelY(ydir);
     }
     @Override
     public void tick() {
@@ -30,6 +31,6 @@ public class Projectile extends GameObject{
     @Override
     public void render(Graphics G) {
         G.setColor(Color.white);
-        G.fillRect(X,Y,2,2);
+        G.fillRect(X,Y,3,3);
     }
 }

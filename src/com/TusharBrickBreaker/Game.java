@@ -11,21 +11,22 @@ public class Game extends Canvas implements Runnable {
     private boolean running = false;
     private Handler handler;
 
+
+    public static void main(String[] args) {
+        new Game();
+    }
+
     public Game(){
 
         handler = new Handler();
         this.addKeyListener(new keyInput(handler));
 
-        Random r = new Random();
         new Window(WIDTH, HEIGHT, "games!", this);
-        handler.addObject(new Player(WIDTH/2 - 5,HEIGHT -100));
+        handler.addObject(new Player());
         handler.addObject(new Projectile());
     }
 
-    public static void main(String[] args) {
-	// write your code here
-        new Game();
-    }
+
 
     @Override
     public void run() {

@@ -4,8 +4,10 @@ import java.awt.*;
 
 public class Player extends GameObject{
 
-    Player(int X, int Y){
-        super(X,Y,ID.Player);
+    private static final int WIDTH = 800, HEIGHT = 640;
+
+    Player(){
+        super(WIDTH/2 - 5,HEIGHT -100,ID.Player);
     }
     @Override
     public void tick() {
@@ -14,6 +16,6 @@ public class Player extends GameObject{
     @Override
     public void render(Graphics g) {
         g.setColor(Color.white);
-        g.fillRect(X,Y,20,2);
+        g.fillRect(X,Y,30,3);
     }
 }
