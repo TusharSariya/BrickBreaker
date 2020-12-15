@@ -6,6 +6,9 @@ import java.util.LinkedList;
 public class Handler {
     LinkedList<GameObject> object = new LinkedList<GameObject>();
 
+    private Point projectilePos;
+    private Point playerPos;
+
     public void tick(){
         for(int i = 0; i < object.size(); i++){
             GameObject temp = object.get(i);

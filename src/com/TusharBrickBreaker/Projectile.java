@@ -9,8 +9,11 @@ public class Projectile extends GameObject{
 
     private static final int WIDTH = 800, HEIGHT = 640;
     int projectileSpeed = 3;
-    Projectile(){
+    Player player;
+
+    Projectile(Player player_){
         super(WIDTH/2,HEIGHT/2,ID.Projectile);
+        player = player_;
         Random r = new Random();
         double projectileAngle = r.nextInt(90)+225;
         projectileAngle = toRadians(projectileAngle);
@@ -21,10 +24,13 @@ public class Projectile extends GameObject{
     }
     @Override
     public void tick() {
+        if(X < player.X+15 && X > player.X-15)
+            if(Y > player.Y - 3 && Y < player.Y + 3)
+                if(velY<0)
+                    reverseY();//eventually make it so that it changes angel too
+
         if(X<0 || X>780) reverseX();
         if(Y<0 || Y>600) reverseY();
-        System.out.println("X:"+X);
-        System.out.println("Y:"+Y);
         X = X - velX;
         Y = Y - velY;
     }

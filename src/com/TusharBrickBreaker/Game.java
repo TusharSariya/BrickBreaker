@@ -10,6 +10,9 @@ public class Game extends Canvas implements Runnable {
     private Thread thread;
     private boolean running = false;
     private Handler handler;
+    private Player player;
+    private Projectile projectile;
+    private keyInput keyInput_;
 
 
     public static void main(String[] args) {
@@ -17,13 +20,14 @@ public class Game extends Canvas implements Runnable {
     }
 
     public Game(){
-
         handler = new Handler();
-        this.addKeyListener(new keyInput(handler));
-
+        keyInput_ = new keyInput(handler);
+        player = new Player();
+        projectile = new Projectile(player);
+        this.addKeyListener(keyInput_);
         new Window(WIDTH, HEIGHT, "games!", this);
-        handler.addObject(new Player());
-        handler.addObject(new Projectile());
+        handler.addObject(player);
+        handler.addObject(projectile);
     }
 
 
