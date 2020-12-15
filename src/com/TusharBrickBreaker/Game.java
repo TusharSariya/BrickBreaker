@@ -28,6 +28,7 @@ public class Game extends Canvas implements Runnable {
         new Window(WIDTH, HEIGHT, "games!", this);
         handler.addObject(player);
         handler.addObject(projectile);
+        handler.addObject(new Brick(50,50));
     }
 
 

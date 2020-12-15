@@ -9,6 +9,7 @@ public class Player extends GameObject{
     Player(){
         super(WIDTH/2 - 5,HEIGHT -100,ID.Player);
     }
+
     @Override
     public void tick() {
     }
