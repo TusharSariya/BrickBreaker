@@ -31,18 +31,22 @@ public class Projectile extends GameObject{
             object = objectHandler.object.get(i);
             if(object.id == ID.Player)
             {
-                if(X < object.X+15 && X > object.X-15)
-                    if(Y > object.Y - 3 && Y < object.Y + 3)
+                Player player = (Player)object;
+                if(X < player.X+15 && X > player.X-15)
+                    if(Y > player.Y - 3 && Y < player.Y + 3)
                         if(velY<0)
                             reverseY();//eventually make it so that it changes angel too
             }
             if (object.id == ID.Brick)
             {
+                Brick brick = (Brick)object;
                 //overlapping x axis
-                if (X > object.X && X < object.X + 50)
+                if (X > brick.X && X < brick.X + 50)
                     //see if it hits the bottom or top
-                    if ( Y >object.Y && Y < object.Y + 30)
+                    if ( Y >brick.Y && Y < brick.Y + 30) {
                         reverseY();
+                        brick.hit();
+                    }
             }
         }
 

@@ -12,6 +12,12 @@ public class Handler {
         for(int i = 0; i < object.size(); i++){
             GameObject temp = object.get(i);
             temp.tick();
+            if(temp.id == ID.Brick)
+            {
+                Brick brick = (Brick)temp;
+                if(brick.getHealth() <= 0)
+                    removeObject(brick);
+            }
         }
     }
 
