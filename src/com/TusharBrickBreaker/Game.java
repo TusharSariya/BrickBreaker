@@ -13,6 +13,7 @@ public class Game extends Canvas implements Runnable {
     private Player player;
     private Projectile projectile;
     private keyInput keyInput_;
+    private mouseInput mouseInput_;
 
 
     public static void main(String[] args) {
@@ -25,6 +26,7 @@ public class Game extends Canvas implements Runnable {
         player = new Player();
         projectile = new Projectile(handler);
         this.addKeyListener(keyInput_);
+        this.addMouseListener(mouseInput_);
         new Window(WIDTH, HEIGHT, "games!", this);
         handler.addObject(player);
         handler.addObject(projectile);

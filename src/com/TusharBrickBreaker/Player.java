@@ -1,6 +1,8 @@
 package com.TusharBrickBreaker;
 
 import java.awt.*;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseEvent;
 
 public class Player extends GameObject{
 
@@ -12,6 +14,7 @@ public class Player extends GameObject{
 
     @Override
     public void tick() {
+        X = mouseInput.getMouseXPos();
     }
 
     @Override

@@ -19,8 +19,8 @@ public class keyInput extends KeyAdapter {
             GameObject tempObject = handler.object.get(i);
 
             if(tempObject.getId() == ID.Player){
-                if(key == KeyEvent.VK_A) tempObject.setX(tempObject.getX()-10);
-                if(key == KeyEvent.VK_D) tempObject.setX(tempObject.getX()+10);
+                //if(key == KeyEvent.VK_A) tempObject.setX(tempObject.getX()-10);
+                //if(key == KeyEvent.VK_D) tempObject.setX(tempObject.getX()+10);
             }
         }
     }

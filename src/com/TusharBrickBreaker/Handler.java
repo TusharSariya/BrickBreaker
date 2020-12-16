@@ -2,6 +2,8 @@ package com.TusharBrickBreaker;
 
 import java.awt.*;
 import java.util.LinkedList;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseEvent;
 
 public class Handler {
     LinkedList<GameObject> object = new LinkedList<GameObject>();
@@ -19,6 +21,9 @@ public class Handler {
                     removeObject(brick);
             }
         }
+        System.out.println("(" + MouseInfo.getPointerInfo().getLocation().x +
+                ", " +
+                MouseInfo.getPointerInfo().getLocation().y + ")");
     }
 
     public void render(Graphics g){
