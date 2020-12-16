@@ -3,7 +3,7 @@ package com.TusharBrickBreaker;
 import java.awt.*;
 
 public class Brick extends GameObject{
-
+    private int health = 50;
     public Brick(int X,int Y) {
         super(X, Y, ID.Brick);
     }

@@ -31,8 +31,6 @@ public class Game extends Canvas implements Runnable {
         handler.addObject(new Brick(50,50));
     }
 
-
-
     @Override
     public void run() {
         long lastTime = System.nanoTime();
