@@ -23,6 +23,10 @@ public class keyInput extends KeyAdapter {
                 //if(key == KeyEvent.VK_D) tempObject.setX(tempObject.getX()+10);
             }
         }
+        if(key == KeyEvent.VK_SPACE) {
+            //handler.addObject(new basicGun(e.getXOnScreen() - 15, Game.WIDTH - 100));
+            //handler.addObject(new basicGun(e.getXOnScreen() + 15, Game.WIDTH - 100));
+        }
     }
 
     public void keyReleased(KeyEvent e) {

@@ -21,9 +21,6 @@ public class Handler {
                     removeObject(brick);
             }
         }
-        System.out.println("(" + MouseInfo.getPointerInfo().getLocation().x +
-                ", " +
-                MouseInfo.getPointerInfo().getLocation().y + ")");
     }
 
     public void render(Graphics g){

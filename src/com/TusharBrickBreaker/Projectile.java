@@ -21,8 +21,8 @@ public class Projectile extends GameObject{
         projectileAngle = toRadians(projectileAngle);
         int xdir = (int) (cos(projectileAngle)*projectileSpeed);
         int ydir = (int) (sin(projectileAngle)*projectileSpeed);
-        setVelX(xdir);
-        setVelY(ydir);
+        velX = xdir;
+        velY = ydir;
     }
     @Override
     public void tick() {

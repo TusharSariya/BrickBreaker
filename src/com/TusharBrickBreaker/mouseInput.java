@@ -22,6 +22,8 @@ public class mouseInput extends MouseAdapter {
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        //handler.addObject();
+        System.out.println("yeet");
+        handler.addObject(new basicGun(e.getXOnScreen()-15,Game.WIDTH-100));
+        handler.addObject(new basicGun(e.getXOnScreen()+15,Game.WIDTH-100));
     }
 }

@@ -6,10 +6,8 @@ import java.awt.event.MouseEvent;
 
 public class Player extends GameObject{
 
-    private static final int WIDTH = 800, HEIGHT = 640;
-
     Player(){
-        super(WIDTH/2 - 5,HEIGHT -100,ID.Player);
+        super(Game.WIDTH/2 - 5,Game.HEIGHT -100,ID.Player);
     }
 
     @Override
