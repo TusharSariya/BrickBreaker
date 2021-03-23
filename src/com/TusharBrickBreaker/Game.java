@@ -23,6 +23,7 @@ public class Game extends Canvas implements Runnable {
     public Game(){
         handler = new Handler();
         keyInput_ = new keyInput(handler);
+        mouseInput_ = new mouseInput(handler);
         player = new Player();
         projectile = new Projectile(handler);
         this.addKeyListener(keyInput_);
