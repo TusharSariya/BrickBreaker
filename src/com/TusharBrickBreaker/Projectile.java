@@ -34,8 +34,12 @@ public class Projectile extends GameObject{
                 Player player = (Player)object;
                 if(X < player.X+15 && X > player.X-15)
                     if(Y > player.Y - 3 && Y < player.Y + 3)
-                        if(velY<0)
+                        if(velY<0) {
+                            //System.out.println("velX:" + velX + " velY:" + velY);
                             reverseY();//eventually make it so that it changes angel too
+                            velocityX((X-player.X)/3);
+                        }
+
             }
             if (object.id == ID.Brick)
             {
@@ -67,5 +71,12 @@ public class Projectile extends GameObject{
     }
     public void reverseY() {
         velY = -velY;
+    }
+
+    public void velocityX(int velocity) {
+        if(velocity < 0)
+            velX = max(velocity,-5);
+        if(velocity > 0)
+            velX = min(velocity,5);
     }
 }
